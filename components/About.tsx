@@ -37,7 +37,7 @@ const contents: IListContent[] = [
 
 function About() {
   return (
-    <div className="mx-auto grid h-screen max-w-7xl grid-cols-1 place-items-center px-10 md:grid-cols-2">
+    <div className="mx-auto grid h-screen max-w-7xl grid-cols-1 place-items-center overflow-hidden px-10 md:grid-cols-2">
       <motion.h3
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
