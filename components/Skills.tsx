@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-// import Skill from "./Skill";
+import Skill from "./Skill";
 
 type Props = {};
 
@@ -17,7 +17,7 @@ function Skills({}: Props) {
         </p>
       </div>
       <div className="grid grid-cols-4 gap-5">
-        {/* <Skill />
+        <Skill />
         <Skill />
         <Skill />
         <Skill />
@@ -30,7 +30,7 @@ function Skills({}: Props) {
         <Skill directionLeft />
         <Skill directionLeft />
         <Skill directionLeft />
-        <Skill directionLeft /> */}
+        <Skill directionLeft />
       </div>
     </motion.div>
   );
