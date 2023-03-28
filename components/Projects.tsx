@@ -7,10 +7,10 @@ function Projects({}: Props) {
 
   return (
     <div className="grid h-screen max-w-full grid-cols-1 place-items-center overflow-hidden px-10">
-      <h3 className="customTransition text-xl tracking-[20px] text-gray-500 md:col-span-2 md:text-2xl">
+      <h3 className="customTransition z-20 text-xl tracking-[20px] text-gray-500 md:col-span-2 md:text-2xl">
         프로젝트
       </h3>
-      <div className="flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll">
+      <div className="flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project) => (
           <div
             key={project}

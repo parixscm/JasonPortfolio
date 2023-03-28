@@ -15,7 +15,7 @@ function Experience({}: Props) {
       <h3 className="customTransition text-xl tracking-[20px] text-gray-500 md:text-2xl">
         경험치
       </h3>
-      <div className="flex w-full snap-x snap-mandatory space-x-5 overflow-x-scroll p-10">
+      <div className="flex w-full snap-x snap-mandatory space-x-5 overflow-x-scroll p-10 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         <ExperienceCard />
         <ExperienceCard />
         <ExperienceCard />

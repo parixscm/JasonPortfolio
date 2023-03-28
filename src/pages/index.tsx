@@ -8,9 +8,9 @@ import Skills from "../../components/Skills";
 
 export default function Home() {
   return (
-    <div className="z-0 h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll bg-[rgb(36,36,36)] text-white">
+    <div className="z-0 h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll bg-[rgb(36,36,36)] text-white scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>
-        <title>제이슨 포트</title>
+        <title>제이슨 하우스</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

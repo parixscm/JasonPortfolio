@@ -15,7 +15,7 @@ const contents: IListContent[] = [
   },
   {
     icon: "🤙🏻",
-    text: "책임감이 생각보다 강합니다,",
+    text: "책임감이 강합니다,",
     highlightText: "strong responsibility: ",
   },
   {
@@ -25,12 +25,12 @@ const contents: IListContent[] = [
   },
   {
     icon: "📖",
-    text: "배움을 게을리하지 않습니다,",
+    text: "무엇보다 배움을 게을리하지 않습니다,",
     highlightText: "delve into: ",
   },
   {
     icon: "🌊",
-    text: "새로운 경험, 다양한 시도 환영합니다!,",
+    text: "새로운 경험, 다양한 시도를 애정합니다!,",
     highlightText: "curious adventurer: ",
   },
 ];
@@ -64,7 +64,6 @@ function About() {
         className="space-y-6 xl:space-y-12"
       >
         <h4 className="customTransition text-4xl font-light xl:text-5xl">
-          {/* {"<INFJ 개발자 제이슨 />"} */}
           const{" "}
           <span className="font-semibold underline decoration-[#F7AB0A]/50 underline-offset-8 xl:font-bold">
             개발자_제이슨
