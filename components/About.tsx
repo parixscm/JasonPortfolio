@@ -42,6 +42,7 @@ function About() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
+        viewport={{ once: true }}
         className="customTransition text-xl tracking-[20px] text-gray-500 md:col-span-2 md:text-2xl"
       >
         인트로
