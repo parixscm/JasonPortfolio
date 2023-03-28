@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ExperienceCard from "./ExperienceCard";
 
 type Props = {};
 
@@ -15,9 +16,9 @@ function Experience({}: Props) {
         경험치
       </h3>
       <div className="flex w-full snap-x snap-mandatory space-x-5 overflow-x-scroll p-10">
-        {/* <ExperienceCard />
         <ExperienceCard />
-        <ExperienceCard /> */}
+        <ExperienceCard />
+        <ExperienceCard />
       </div>
     </motion.div>
   );
