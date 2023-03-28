@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+// import Skill from "./Skill";
 
 type Props = {};
 
@@ -15,7 +16,22 @@ function Skills({}: Props) {
           숙련도가 보입니다
         </p>
       </div>
-      <div></div>
+      <div className="grid grid-cols-4 gap-5">
+        {/* <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill directionLeft />
+        <Skill directionLeft />
+        <Skill directionLeft />
+        <Skill directionLeft />
+        <Skill directionLeft />
+        <Skill directionLeft /> */}
+      </div>
     </motion.div>
   );
 }
