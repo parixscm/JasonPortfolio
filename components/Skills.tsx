@@ -5,7 +5,7 @@ type Props = {};
 
 function Skills({}: Props) {
   return (
-    <motion.div className="mx-auto grid h-screen min-h-screen max-w-[2000px] grid-cols-1 place-items-center">
+    <motion.div className="mx-auto grid h-screen min-h-screen max-w-[2000px] grid-cols-1 place-items-center overflow-hidden">
       <div className="flex flex-col items-center space-y-2">
         <h3 className="text-xl tracking-[20px] text-gray-500 md:text-2xl">
           스킬
