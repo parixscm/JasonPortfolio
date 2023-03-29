@@ -20,7 +20,7 @@ const contents: IListContent[] = [
   },
   {
     icon: "🎧",
-    text: "그래서 주변의 소리에 귀 기울입니다,",
+    text: "주변에 귀 기울일 준비가 되어있습니다,",
     highlightText: "good listener: ",
   },
   {
@@ -30,7 +30,7 @@ const contents: IListContent[] = [
   },
   {
     icon: "🌊",
-    text: "새로운 경험, 다양한 시도를 애정합니다!,",
+    text: "React Native, GraphQL에 관심이 있습니다,",
     highlightText: "curious adventurer: ",
   },
 ];
