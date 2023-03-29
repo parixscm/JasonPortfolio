@@ -34,8 +34,8 @@ export default defineType({
       type: 'date',
     }),
     defineField({
-      name: 'techs',
-      title: 'Techs',
+      name: 'skills',
+      title: 'Skills',
       type: 'array',
       of: [{type: 'reference', to: {type: 'skill'}}],
     }),
