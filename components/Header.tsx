@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
-import { Social } from "../typings";
+import { ISocial } from "../typings";
 
 type Props = {
-  socials: Social[];
+  socials: ISocial[];
 };
 
 function Header({ socials }: Props) {
