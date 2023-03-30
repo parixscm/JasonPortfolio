@@ -1,5 +1,7 @@
-import { motion } from "framer-motion";
 import AboutLine from "./AboutLine";
+import { motion } from "framer-motion";
+import { urlFor } from "../sanity";
+import { IPageInfo } from "../typings";
 
 interface IListContent {
   icon: string;
@@ -30,12 +32,16 @@ const contents: IListContent[] = [
   },
   {
     icon: "🌊",
-    text: "React Native, GraphQL에 관심이 있습니다,",
+    text: "React Native, Three.js를 공부하고 싶습니다!,",
     highlightText: "curious adventurer: ",
   },
 ];
 
-function About() {
+type AboutPageProps = {
+  pageInfo: IPageInfo;
+};
+
+function About({ pageInfo }: AboutPageProps) {
   return (
     <div className="mx-auto grid h-screen max-w-7xl grid-cols-1 place-items-center overflow-hidden px-10 md:grid-cols-2">
       <motion.h3
@@ -53,7 +59,7 @@ function About() {
         transition={{ duration: 1.1 }}
         viewport={{ once: true }}
         alt="intro_profile"
-        src="https://images.unsplash.com/photo-1497316730643-415fac54a2af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+        src={urlFor(pageInfo.profilePic).url()}
         className="h-56 w-56 flex-shrink-0 overflow-hidden rounded-full object-cover md:h-[450px] md:w-72 md:rounded-lg xl:h-[580px] xl:w-[390px]"
       />
       <motion.div

@@ -13,7 +13,7 @@ interface Image {
   };
 }
 
-export interface PageInfo extends SanityBody {
+export interface IPageInfo extends SanityBody {
   _type: "pageInfo";
   name: string;
   role: string;
@@ -21,20 +21,20 @@ export interface PageInfo extends SanityBody {
   profilePic: Image;
 }
 
-export interface Social extends SanityBody {
+export interface ISocial extends SanityBody {
   _type: "social";
   title: string;
   url: string;
 }
 
-export interface Skill extends SanityBody {
+export interface ISkill extends SanityBody {
   _type: "skill";
   title: string;
   proficiency: number;
   image: Image;
 }
 
-export interface Project extends SanityBody {
+export interface IProject extends SanityBody {
   _type: "project";
   title: string;
   image: "image";
@@ -43,8 +43,9 @@ export interface Project extends SanityBody {
   skills: Skill[];
 }
 
-export interface Experience extends SanityBody {
+export interface IExperience extends SanityBody {
   _type: "experience";
+  jobTitle: string;
   company: string;
   companyImage: Image;
   dateStarted: date;

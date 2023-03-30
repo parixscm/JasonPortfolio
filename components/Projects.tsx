@@ -1,19 +1,22 @@
+import Skill from "./Skill";
 import { motion } from "framer-motion";
+import { urlFor } from "../sanity";
+import { IProject } from "../typings";
 
-type Props = {};
+type ProjectPageProps = {
+  projects: IProject[];
+};
 
-function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
-
+function Projects({ projects }: ProjectPageProps) {
   return (
     <div className="grid h-screen max-w-full grid-cols-1 place-items-center overflow-hidden px-10">
       <h3 className="customTransition z-20 text-xl tracking-[20px] text-gray-500 md:col-span-2 md:text-2xl">
         프로젝트
       </h3>
       <div className="flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {projects.map((project) => (
+        {projects.map((project, idx) => (
           <div
-            key={project}
+            key={project._id}
             className="flex w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 p-10"
           >
             <motion.img
@@ -22,18 +25,23 @@ function Projects({}: Props) {
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
               alt="project"
-              src="https://images.unsplash.com/photo-1678544937262-e4c3fae6cf05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI2fEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              src={urlFor(project.image).url()}
               className="h-[330px] w-96"
             />
             <div className="space-y-8">
               <h4 className="text-3xl font-semibold">
                 <span className="underline decoration-[#F7AB0A]">
-                  프로젝트 {project} / 5:
+                  프로젝트 {idx + 1} / 5:
                 </span>{" "}
-                Clone
+                {project.title}
               </h4>
+              <div className="flex items-center justify-center space-x-2">
+                {project.skills.map((skill) => (
+                  <Skill key={skill._id} skill={skill} />
+                ))}
+              </div>
               <p className="text-center text-lg md:text-left">
-                프로젝트 summary
+                {project.summary}
               </p>
             </div>
           </div>

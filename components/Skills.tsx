@@ -1,9 +1,10 @@
-import { motion } from "framer-motion";
 import Skill from "./Skill";
+import { motion } from "framer-motion";
+import { ISkill } from "../typings";
 
-type Props = {};
+type SkillsPageProps = { skills: ISkill[] };
 
-function Skills({}: Props) {
+function Skills({ skills }: SkillsPageProps) {
   return (
     <motion.div className="mx-auto grid h-screen min-h-screen max-w-[2000px] grid-cols-1 place-items-center overflow-hidden">
       <div className="flex flex-col items-center space-y-2">
@@ -15,20 +16,9 @@ function Skills({}: Props) {
         </p>
       </div>
       <div className="grid grid-cols-4 gap-5">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+        {skills.map((skill) => (
+          <Skill key={skill._id} skill={skill} />
+        ))}
       </div>
     </motion.div>
   );
