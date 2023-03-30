@@ -6,7 +6,7 @@ type Props = { experience: IExperience };
 
 function ExperienceCard({ experience }: Props) {
   return (
-    <article className="flex max-w-[500px] flex-shrink-0 cursor-pointer snap-center flex-col items-center justify-center space-y-7 overflow-hidden overflow-y-scroll rounded-xl bg-[#292929] p-10 text-center opacity-60 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900px]">
+    <article className="flex max-w-[500px] flex-shrink-0 cursor-pointer snap-center flex-col items-center justify-center space-y-7 overflow-hidden rounded-xl bg-[#292929] p-10 text-center opacity-60 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900px]">
       <motion.img
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -29,7 +29,7 @@ function ExperienceCard({ experience }: Props) {
               key={skill._id}
               alt="tech"
               src={urlFor(skill.image).url()}
-              className="h-10 w-10 rounded-full object-cover"
+              className="h-10 w-10 rounded-full object-cover xl:h-12 xl:w-12"
             />
           ))}
         </div>

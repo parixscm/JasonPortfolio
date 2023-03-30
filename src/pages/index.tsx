@@ -34,7 +34,6 @@ export default function Home({
   projects,
   socials,
 }: Props) {
-  console.log(experiences);
   return (
     <div className="z-0 h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll bg-[rgb(36,36,36)] text-white scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>

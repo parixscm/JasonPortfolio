@@ -39,7 +39,8 @@ export interface IProject extends SanityBody {
   title: string;
   image: "image";
   linkToBuild: string;
-  summary: string;
+  with: string;
+  summary: string[];
   skills: Skill[];
 }
 

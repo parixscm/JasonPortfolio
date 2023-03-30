@@ -22,7 +22,13 @@ export default defineType({
     defineField({
       name: 'summary',
       title: 'Summary',
-      type: 'text',
+      type: 'array',
+      of: [{type: 'string'}],
+    }),
+    defineField({
+      name: 'with',
+      title: 'With',
+      type: 'string',
     }),
     defineField({
       name: 'skills',

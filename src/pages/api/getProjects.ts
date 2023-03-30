@@ -4,7 +4,7 @@ import { sanityClient } from "../../../sanity";
 import { IProject } from "../../../typings";
 
 const query = groq`
-  *[_type == "project"] {
+  *[_type == "project"] | order(_createdAt asc) {
     ...,
     skills[]->
   }

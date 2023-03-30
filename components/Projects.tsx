@@ -1,7 +1,7 @@
-import Skill from "./Skill";
 import { motion } from "framer-motion";
 import { urlFor } from "../sanity";
 import { IProject } from "../typings";
+import Link from "next/link";
 
 type ProjectPageProps = {
   projects: IProject[];
@@ -14,38 +14,58 @@ function Projects({ projects }: ProjectPageProps) {
         프로젝트
       </h3>
       <div className="flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {projects.map((project, idx) => (
-          <div
-            key={project._id}
-            className="flex w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 p-10"
-          >
-            <motion.img
-              initial={{ y: -300, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1.2 }}
-              viewport={{ once: true }}
-              alt="project"
-              src={urlFor(project.image).url()}
-              className="h-[330px] w-96"
-            />
-            <div className="space-y-8">
-              <h4 className="text-3xl font-semibold">
-                <span className="underline decoration-[#F7AB0A]">
-                  프로젝트 {idx + 1} / 5:
-                </span>{" "}
-                {project.title}
-              </h4>
-              <div className="flex items-center justify-center space-x-2">
-                {project.skills.map((skill) => (
-                  <Skill key={skill._id} skill={skill} />
-                ))}
+        {projects.map((project, idx) => {
+          return (
+            <div
+              key={project._id}
+              className="flex w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 p-10"
+            >
+              <motion.img
+                initial={{ y: -300, opacity: 0 }}
+                whileHover={{ y: -15 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                alt="project"
+                src={urlFor(project.image).url()}
+                className="h-[330px] w-[580px] object-cover"
+              />
+              <div className="flex flex-col items-center justify-center">
+                <h4 className="text-xl font-semibold md:mb-1 md:text-2xl xl:text-3xl">
+                  <span className="underline decoration-[#F7AB0A]">
+                    프로젝트 {idx + 1} / {projects.length}:
+                  </span>{" "}
+                  {project.title}
+                </h4>
+                <p className="mb-1 text-sm xl:mb-2 xl:text-base">
+                  <Link
+                    href={project.linkToBuild}
+                    target="_blank"
+                    className="mr-1 cursor-pointer"
+                  >
+                    🏠
+                  </Link>
+                  {project.with}
+                </p>
+                <div className="mb-4 flex items-center justify-center space-x-2 overflow-x-auto md:mb-6">
+                  {project.skills.map((skill) => (
+                    <img
+                      key={skill._id}
+                      alt="skill_logo"
+                      src={urlFor(skill.image).url()}
+                      className="h-10 w-10 rounded-full object-cover xl:h-12 xl:w-12"
+                    />
+                  ))}
+                </div>
+                <ul className="ml-5 list-disc space-y-4 px-14 text-left text-sm md:px-5 md:text-base">
+                  {project.summary.map((line, idx) => (
+                    <li key={idx}>{line}</li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-center text-lg md:text-left">
-                {project.summary}
-              </p>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
