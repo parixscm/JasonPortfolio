@@ -24,7 +24,7 @@ function Experience({ experiences }: ExpPageProps) {
         ))}
         <article className="flex max-w-[500px] flex-shrink-0 cursor-pointer snap-center flex-col items-center justify-center rounded-xl bg-[#292929] p-10 text-xl font-semibold opacity-50 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900px]">
           <span>NULL YET</span>
-          <p>앞으로 화려하게 펼쳐질 미래 입니다 ✨</p>
+          <p className="text-2xl">앞으로 화려하게 펼쳐질 미래 입니다 ✨</p>
         </article>
       </div>
     </motion.div>
