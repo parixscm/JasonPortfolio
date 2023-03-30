@@ -61,7 +61,7 @@ export default function Home({
   );
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export async function getStaticProps() {
   const pageInfo: IPageInfo = await fetchPageInfo();
   const skills: ISkill[] = await fetchSkills();
   const experiences: IExperience[] = await fetchExperiences();
@@ -78,4 +78,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     },
     revalidate: 100,
   };
-};
+}
