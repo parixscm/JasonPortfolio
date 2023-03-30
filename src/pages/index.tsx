@@ -41,7 +41,7 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header socials={socials} />
+      <Header socials={socials} pageInfo={pageInfo} />
       <section id="hero" className="snap-start">
         <Hero pageInfo={pageInfo} />
       </section>
