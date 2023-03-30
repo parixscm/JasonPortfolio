@@ -6,7 +6,7 @@ type Props = { experience: IExperience };
 
 function ExperienceCard({ experience }: Props) {
   return (
-    <article className="flex w-[500px] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden rounded-xl bg-[#292929] p-10 opacity-50 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900px]">
+    <article className="flex max-w-[500px] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden overflow-y-scroll rounded-xl bg-[#292929] p-10 opacity-50 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900px]">
       <motion.img
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -34,9 +34,9 @@ function ExperienceCard({ experience }: Props) {
           {new Date(experience.dateEnded).toLocaleDateString()}
         </p>
         <ul className="ml-5 list-disc space-y-4">
-          <li>내용</li>
-          <li>내용</li>
-          <li>내용</li>
+          {experience.points.map((point, idx) => (
+            <li key={idx}>{point}</li>
+          ))}
         </ul>
       </div>
     </article>

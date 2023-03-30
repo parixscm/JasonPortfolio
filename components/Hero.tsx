@@ -23,7 +23,7 @@ function Hero({ pageInfo }: HeroPageProps) {
       <img
         alt="hero"
         src={urlFor(pageInfo.heroImage).url()}
-        className="h-32 w-32 rounded-full bg-transparent object-cover"
+        className="z-20 h-32 w-32 rounded-full bg-transparent object-cover"
       />
       {/* <div className="h-32 w-32 rounded-full bg-blue-400" /> */}
       <div className="z-20">

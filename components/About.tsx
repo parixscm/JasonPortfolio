@@ -80,14 +80,12 @@ function About({ pageInfo }: AboutPageProps) {
           <span className="pl-10 text-3xl xl:text-4xl">{"{"}</span>
           <div className="space-y-4 xl:space-y-7">
             {contents.map(({ icon, text, highlightText }, idx) => (
-              <>
-                <AboutLine
-                  key={idx}
-                  icon={icon}
-                  text={text}
-                  highlightText={highlightText}
-                />
-              </>
+              <AboutLine
+                key={idx}
+                icon={icon}
+                text={text}
+                highlightText={highlightText}
+              />
             ))}
           </div>
           <span className="pl-10 text-3xl xl:text-4xl">{"};"}</span>
