@@ -9,7 +9,7 @@ type ProjectPageProps = {
 
 function Projects({ projects }: ProjectPageProps) {
   return (
-    <div className="grid h-screen max-w-full grid-cols-1 place-items-center overflow-hidden px-10">
+    <div className="grid h-screen max-w-full grid-cols-1 place-items-center overflow-hidden px-5">
       <h3 className="customTransition z-20 text-xl tracking-[20px] text-gray-500 md:col-span-2 md:text-2xl">
         프로젝트
       </h3>
@@ -32,12 +32,14 @@ function Projects({ projects }: ProjectPageProps) {
               />
               <div className="flex flex-col items-center justify-center">
                 <h4 className="text-xl font-semibold md:mb-1 md:text-2xl xl:text-3xl">
-                  <span className="underline decoration-[#F7AB0A]">
-                    프로젝트 {idx + 1} / {projects.length}:
+                  <span>
+                    프로젝트 {idx + 1} / {projects.length} 🌬
                   </span>{" "}
-                  {project.title}
+                  <span className="ml-1 animate-pulse underline decoration-[#F7AB0A]">
+                    {project.title}
+                  </span>
                 </h4>
-                <p className="mb-1 text-sm xl:mb-2 xl:text-base">
+                <p className="mb-2 text-sm xl:mb-3 xl:text-base">
                   <Link
                     href={project.linkToBuild}
                     target="_blank"
@@ -45,7 +47,7 @@ function Projects({ projects }: ProjectPageProps) {
                   >
                     🏠
                   </Link>
-                  {project.with}
+                  <span className="text-gray-400">{project.with}</span>
                 </p>
                 <div className="mb-4 flex items-center justify-center space-x-2 overflow-x-auto md:mb-6">
                   {project.skills.map((skill) => (
@@ -57,7 +59,7 @@ function Projects({ projects }: ProjectPageProps) {
                     />
                   ))}
                 </div>
-                <ul className="ml-5 list-disc space-y-4 px-14 text-left text-sm md:px-5 md:text-base">
+                <ul className="ml-5 max-h-[200px] list-disc space-y-4 overflow-y-scroll px-14 text-left text-sm scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-500/50 md:px-5 md:text-base">
                   {project.summary.map((line, idx) => (
                     <li key={idx}>{line}</li>
                   ))}
