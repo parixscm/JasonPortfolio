@@ -1,3 +1,4 @@
+// 📍 Parent Interface
 interface SanityBody {
   _id: string;
   _rev: string;
@@ -5,6 +6,7 @@ interface SanityBody {
   _updatedAt: string;
 }
 
+// 📍 Child Interface
 interface Image {
   _type: "image";
   asset: {
@@ -13,10 +15,20 @@ interface Image {
   };
 }
 
+interface IIntroLine {
+  icon: string;
+  highlightText: string;
+  text1: string;
+  text2: string;
+  isLeft: boolean;
+}
+
+// 📍 Section Export Interface
 export interface IPageInfo extends SanityBody {
   _type: "pageInfo";
   name: string;
   role: string;
+  introLines: IIntroLine[];
   heroImage: Image;
   profilePic: Image;
 }
@@ -41,7 +53,7 @@ export interface IProject extends SanityBody {
   linkToBuild: string;
   with: string;
   summary: string[];
-  skills: Skill[];
+  skills: ISkill[];
 }
 
 export interface IExperience extends SanityBody {

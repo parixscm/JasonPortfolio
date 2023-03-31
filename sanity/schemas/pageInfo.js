@@ -31,5 +31,43 @@ export default defineType({
         hotspot: true,
       },
     }),
+    defineField({
+      name: 'introLines',
+      title: 'IntroLines',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          name: 'line',
+          fields: [
+            {
+              name: 'icon',
+              title: 'Icon',
+              type: 'string',
+            },
+            {
+              name: 'text1',
+              title: 'Text1',
+              type: 'string',
+            },
+            {
+              name: 'text2',
+              title: 'Text2',
+              type: 'string',
+            },
+            {
+              name: 'highlightText',
+              title: 'HighlightText',
+              type: 'string',
+            },
+            {
+              name: 'isLeft',
+              title: 'IsLeft',
+              type: 'boolean',
+            },
+          ],
+        },
+      ],
+    }),
   ],
 })

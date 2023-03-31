@@ -3,40 +3,6 @@ import { motion } from "framer-motion";
 import { urlFor } from "../sanity";
 import { IPageInfo } from "../typings";
 
-interface IListContent {
-  icon: string;
-  text: string;
-  highlightText: string;
-}
-
-const contents: IListContent[] = [
-  {
-    icon: "🏢",
-    text: "팀 중심 사고를 지향합니다,",
-    highlightText: "team oriented: ",
-  },
-  {
-    icon: "🤙🏻",
-    text: "책임감이 강합니다,",
-    highlightText: "strong responsibility: ",
-  },
-  {
-    icon: "🎧",
-    text: "주변에 귀 기울일 준비가 되어있습니다,",
-    highlightText: "good listener: ",
-  },
-  {
-    icon: "📖",
-    text: "무엇보다 배움을 게을리하지 않습니다,",
-    highlightText: "delve into: ",
-  },
-  {
-    icon: "🌊",
-    text: "React Native, Three.js를 공부하고 싶습니다!,",
-    highlightText: "curious adventurer: ",
-  },
-];
-
 type AboutPageProps = {
   pageInfo: IPageInfo;
 };
@@ -56,6 +22,7 @@ function About({ pageInfo }: AboutPageProps) {
       <motion.img
         initial={{ x: -200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
+        whileHover={{ y: -20 }}
         transition={{ duration: 1.1 }}
         viewport={{ once: true }}
         alt="intro_profile"
@@ -71,24 +38,28 @@ function About({ pageInfo }: AboutPageProps) {
       >
         <h4 className="customTransition text-4xl font-light xl:text-5xl">
           const{" "}
-          <span className="font-semibold underline decoration-[#F7AB0A]/50 underline-offset-8 xl:font-bold">
-            개발자_제이슨
+          <span className="animate-pulse font-semibold text-[#F7AB0A] xl:font-bold">
+            개발자 제이슨
           </span>{" "}
           =
         </h4>
         <div className="customTransition">
-          <span className="pl-10 text-3xl xl:text-4xl">{"{"}</span>
+          <span className="text-3xl xl:text-4xl">{"{"}</span>
           <div className="space-y-4 xl:space-y-7">
-            {contents.map(({ icon, text, highlightText }, idx) => (
-              <AboutLine
-                key={idx}
-                icon={icon}
-                text={text}
-                highlightText={highlightText}
-              />
-            ))}
+            {pageInfo.introLines.map(
+              ({ icon, text1, text2, highlightText, isLeft }, idx) => (
+                <AboutLine
+                  key={idx}
+                  icon={icon}
+                  text1={text1}
+                  text2={text2}
+                  highlightText={highlightText}
+                  isLeft={isLeft}
+                />
+              )
+            )}
           </div>
-          <span className="pl-10 text-3xl xl:text-4xl">{"};"}</span>
+          <span className="text-3xl xl:text-4xl">{"};"}</span>
         </div>
       </motion.div>
     </div>
