@@ -24,6 +24,12 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'heroLines',
+      title: 'HeroLines',
+      type: 'array',
+      of: [{type: 'string', name: 'heroLine', title: 'HeroLine'}],
+    }),
+    defineField({
       name: 'profilePic',
       title: 'ProfilePic',
       type: 'image',
@@ -39,6 +45,7 @@ export default defineType({
         {
           type: 'object',
           name: 'line',
+          title: 'Line',
           fields: [
             {
               name: 'icon',

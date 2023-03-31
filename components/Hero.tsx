@@ -8,11 +8,7 @@ type HeroPageProps = { pageInfo: IPageInfo };
 
 function Hero({ pageInfo }: HeroPageProps) {
   const [text] = useTypewriter({
-    words: [
-      `안녕하세요! ${pageInfo.name} 입니다!`,
-      "여행을-많이-좋아합니다.tsx",
-      "<하지만코딩이더재밌는걸요? />",
-    ],
+    words: pageInfo.heroLines,
     loop: true,
     delaySpeed: 2000,
   });
@@ -25,7 +21,6 @@ function Hero({ pageInfo }: HeroPageProps) {
         src={urlFor(pageInfo.heroImage).url()}
         className="z-20 h-32 w-32 rounded-full bg-transparent object-cover"
       />
-      {/* <div className="h-32 w-32 rounded-full bg-blue-400" /> */}
       <div className="z-20">
         <h2 className="pb-2 text-sm uppercase tracking-[15px] text-gray-500">
           {pageInfo.role}

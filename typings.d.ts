@@ -28,6 +28,7 @@ export interface IPageInfo extends SanityBody {
   _type: "pageInfo";
   name: string;
   role: string;
+  heroLines: string[];
   introLines: IIntroLine[];
   heroImage: Image;
   profilePic: Image;
