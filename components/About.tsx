@@ -39,7 +39,7 @@ function About({ pageInfo }: AboutPageProps) {
         <h4 className="customTransition text-4xl font-light xl:text-5xl">
           const{" "}
           <span className="animate-pulse font-semibold text-[#F7AB0A] xl:font-bold">
-            개발자 제이슨
+            💻 개발자 Jason
           </span>{" "}
           =
         </h4>

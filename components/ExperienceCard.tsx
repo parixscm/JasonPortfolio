@@ -19,7 +19,7 @@ function ExperienceCard({ experience }: Props) {
       <div className="px-0 md:px-10">
         <h4 className="text-3xl font-light">{experience.company}</h4>
         <p className="text-xl font-semibold">{experience.jobTitle}</p>
-        <p className="my-2 text-sm text-gray-300">
+        <p className="my-2 text-sm text-gray-500">
           {new Date(experience.dateStarted).toLocaleDateString()} -{" "}
           {new Date(experience.dateEnded).toLocaleDateString()}
         </p>
