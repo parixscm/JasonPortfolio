@@ -1,3 +1,9 @@
+/**
+ * 파일 역할: 소개 문구 컴포넌트 (in 인트로 페이지)
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.31.
+ */
+
 import { easeInOut, motion } from "framer-motion";
 import { IIntroLine } from "../typings";
 

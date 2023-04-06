@@ -1,10 +1,19 @@
+/**
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.04.07.
+ */
+
 import Head from "next/head";
+
+// page and components
 import About from "../../components/About";
 import Experience from "../../components/Experience";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Projects from "../../components/Projects";
 import Skills from "../../components/Skills";
+
+// interface per page
 import {
   IExperience,
   IPageInfo,
@@ -12,6 +21,8 @@ import {
   ISkill,
   ISocial,
 } from "../../typings";
+
+// data fetching utility functions
 import { fetchExperiences } from "../../utils/fetchExperiences";
 import { fetchPageInfo } from "../../utils/fetchPageInfo";
 import { fetchProjects } from "../../utils/fetchProjects";
@@ -33,7 +44,6 @@ export default function Home({
   projects,
   socials,
 }: Props) {
-  console.log(pageInfo);
   return (
     <div className="z-0 h-screen select-none snap-y snap-mandatory overflow-x-hidden overflow-y-scroll bg-[rgb(36,36,36)] text-white scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>
@@ -61,6 +71,7 @@ export default function Home({
   );
 }
 
+// for Incremental Static Regeneration purpose
 export async function getStaticProps() {
   const pageInfo: IPageInfo = await fetchPageInfo();
   const skills: ISkill[] = await fetchSkills();

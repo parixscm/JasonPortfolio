@@ -1,12 +1,18 @@
+/**
+ * 파일 역할: 스킬 컴포넌트 (in 스킬 페이지)
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.30.
+ */
+
 import { motion } from "framer-motion";
 import { urlFor } from "../sanity";
 import { ISkill } from "../typings";
 
-type Props = {
+type SkillProps = {
   skill: ISkill;
 };
 
-function Skill({ skill }: Props) {
+function Skill({ skill }: SkillProps) {
   return (
     <div className="group relative flex cursor-pointer hover:scale-110">
       <motion.img

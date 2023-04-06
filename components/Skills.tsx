@@ -1,3 +1,9 @@
+/**
+ * 파일 역할: 스킬 페이지
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.30.
+ */
+
 import Skill from "./Skill";
 import { motion } from "framer-motion";
 import { ISkill } from "../typings";
@@ -16,9 +22,17 @@ function Skills({ skills }: SkillsPageProps) {
         </p>
       </div>
       <div className="grid grid-cols-4 gap-5">
-        {skills.map((skill) => (
-          <Skill key={skill._id} skill={skill} />
-        ))}
+        {skills.map((skill) => {
+          if (
+            skill.title === "Metamask" ||
+            skill.title === "Solidity" ||
+            skill.title === "MySQL" ||
+            skill.title === "NodeJS" ||
+            skill.title === "Firebase"
+          )
+            return null;
+          return <Skill key={skill._id} skill={skill} />;
+        })}
       </div>
     </motion.div>
   );

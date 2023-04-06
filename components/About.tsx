@@ -1,3 +1,9 @@
+/**
+ * 파일 역할: 인트로 페이지
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.31.
+ */
+
 import AboutLine from "./AboutLine";
 import { motion } from "framer-motion";
 import { urlFor } from "../sanity";

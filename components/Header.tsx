@@ -1,15 +1,21 @@
+/**
+ * 파일 역할: 헤더 컴포넌트
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.31.
+ */
+
 import Link from "next/link";
+import { urlFor } from "../sanity";
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 import { IPageInfo, ISocial } from "../typings";
-import { urlFor } from "../sanity";
 
-type Props = {
+type HeaderProps = {
   socials: ISocial[];
   pageInfo: IPageInfo;
 };
 
-function Header({ socials, pageInfo }: Props) {
+function Header({ socials, pageInfo }: HeaderProps) {
   return (
     <header className="sticky top-0 z-20 mx-auto flex max-w-7xl items-center justify-between p-5">
       <motion.div
@@ -36,6 +42,7 @@ function Header({ socials, pageInfo }: Props) {
         <Link href="#hero">
           <footer className="sticky bottom-5 w-full cursor-pointer">
             <div className="flex items-center justify-center">
+              {/* FIXME: Next Image 컴포넌트로 전환 필요 */}
               <img
                 alt="hero_link"
                 src={urlFor(pageInfo.heroImage).url()}

@@ -1,3 +1,9 @@
+/**
+ * 파일 역할: 경험치 페이지
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.30.
+ */
+
 import ExperienceCard from "./ExperienceCard";
 import { motion } from "framer-motion";
 import { IExperience } from "../typings";
@@ -24,7 +30,7 @@ function Experience({ experiences }: ExpPageProps) {
         ))}
         <article className="flex max-w-[500px] flex-shrink-0 cursor-pointer snap-center flex-col items-center justify-center rounded-xl bg-[#292929] p-10 text-xl font-semibold opacity-50 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900px]">
           <span className="animate-bounce">NULL</span>
-          <p className="text-2xl">Bright Future awaits Jason... ✨</p>
+          <p className="text-2xl">Bright Future awaits... ✨ </p>
         </article>
       </div>
     </motion.div>

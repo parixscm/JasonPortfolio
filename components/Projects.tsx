@@ -1,7 +1,13 @@
+/**
+ * 파일 역할: 프로젝트 페이지
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.31.
+ */
+
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { urlFor } from "../sanity";
 import { IProject } from "../typings";
-import Link from "next/link";
 
 type ProjectPageProps = {
   projects: IProject[];

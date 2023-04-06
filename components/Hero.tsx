@@ -1,12 +1,20 @@
+/**
+ * 파일 역할: 홈 페이지
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.31.
+ */
+
 import Link from "next/link";
 import BgCircles from "./BgCircles";
 import { urlFor } from "../sanity";
 import { IPageInfo } from "../typings";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-type HeroPageProps = { pageInfo: IPageInfo };
+type HomePageProps = { pageInfo: IPageInfo };
 
-function Hero({ pageInfo }: HeroPageProps) {
+function HomePage({ pageInfo }: HomePageProps) {
+  // type writer 애니메이션 효과가 적용될 변수
+  // loop - 반복 횟수, delaySpeed - 텍스트 전환 딜레이 시간
   const [text] = useTypewriter({
     words: pageInfo.heroLines,
     loop: true,
@@ -16,6 +24,7 @@ function Hero({ pageInfo }: HeroPageProps) {
   return (
     <div className="flex h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center">
       <BgCircles />
+      {/* FIXME: Next Image 컴포넌트로 전환 필요 */}
       <img
         alt="hero"
         src={urlFor(pageInfo.heroImage).url()}
@@ -48,4 +57,4 @@ function Hero({ pageInfo }: HeroPageProps) {
   );
 }
 
-export default Hero;
+export default HomePage;

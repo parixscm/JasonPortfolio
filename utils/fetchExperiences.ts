@@ -1,3 +1,9 @@
+/**
+ * 파일 역할: 경험치 페이지 data fetching utility function
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.30.
+ */
+
 import { IExperience } from "../typings";
 
 export const fetchExperiences = async () => {

@@ -1,3 +1,9 @@
+/**
+ * 파일 역할: 스킬 페이지 스키마
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.30.
+ */
+
 import {defineField, defineType} from 'sanity'
 
 export default defineType({

@@ -1,8 +1,12 @@
+/**
+ * 파일 역할: radar 애니메이션 컴포넌트 (in 홈페이지)
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.28.
+ */
+
 import { motion } from "framer-motion";
 
-type Props = {};
-
-function BgCircles({}: Props) {
+function BgCircles() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -13,6 +17,7 @@ function BgCircles({}: Props) {
       transition={{ duration: 1.8 }}
       className="relative flex items-center justify-center"
     >
+      {/* 아래 다섯 요소의 크기를 조절하면 원 크기 수정 가능  */}
       <div className="absolute mt-52 h-[200px] w-[200px] animate-ping rounded-full border border-[#333333]" />
       <div className="absolute mt-52 h-[300px] w-[300px] rounded-full border border-[#333333]" />
       <div className="absolute mt-52 h-[500px] w-[500px] rounded-full border border-[#333333]" />

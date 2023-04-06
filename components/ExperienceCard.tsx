@@ -1,10 +1,16 @@
+/**
+ * 파일 역할: 카드 컴포넌트 (in 경험치 페이지)
+ * 작성자: Jason (parixscm)
+ * 최근 업데이트: 2023.03.30.
+ */
+
 import { motion } from "framer-motion";
 import { urlFor } from "../sanity";
 import { IExperience } from "../typings";
 
-type Props = { experience: IExperience };
+type ExpCardProps = { experience: IExperience };
 
-function ExperienceCard({ experience }: Props) {
+function ExperienceCard({ experience }: ExpCardProps) {
   return (
     <article className="flex max-w-[500px] flex-shrink-0 cursor-pointer snap-center flex-col items-center justify-center space-y-7 overflow-hidden rounded-xl bg-[#292929] p-10 text-center opacity-60 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900px]">
       <motion.img
@@ -20,11 +26,12 @@ function ExperienceCard({ experience }: Props) {
         <h4 className="text-3xl font-light">{experience.company}</h4>
         <p className="text-xl font-semibold">{experience.jobTitle}</p>
         <p className="my-2 text-sm text-gray-500">
-          {new Date(experience.dateStarted).toLocaleDateString()} -{" "}
-          {new Date(experience.dateEnded).toLocaleDateString()}
+          {new Date(experience.dateStarted).toLocaleDateString("ko-KR")} -{" "}
+          {new Date(experience.dateEnded).toLocaleDateString("ko-KR")}
         </p>
         <div className="my-5 flex justify-center space-x-2">
           {experience.skills.map((skill) => (
+            // {/* FIXME: Next Image 컴포넌트로 전환 필요 */}
             <img
               key={skill._id}
               alt="tech"
