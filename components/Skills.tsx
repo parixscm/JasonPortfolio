@@ -24,11 +24,9 @@ function Skills({ skills }: SkillsPageProps) {
       <div className="grid grid-cols-4 gap-5">
         {skills.map((skill) => {
           if (
-            skill.title === "Metamask" ||
-            skill.title === "Solidity" ||
-            skill.title === "MySQL" ||
-            skill.title === "NodeJS" ||
-            skill.title === "Firebase"
+            ["Metamask", "Solidity", "MySQL", "NodeJS", "Firebase"].includes(
+              skill.title
+            )
           )
             return null;
           return <Skill key={skill._id} skill={skill} />;
