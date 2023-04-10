@@ -1,4 +1,4 @@
-# 제이슨 하우스에 오신 걸 환영합니다! 💁🏻🏠
+# **제이슨 하우스에 오신 걸 환영합니다! 💁🏻🏠**
 
 👉🏻 https://jason-house.vercel.app
 
@@ -20,7 +20,7 @@
 
 <br />
 
-## **Advanced Feature**
+## **👨🏻‍🏫 Advanced Feature**
 
 - 데이터가 자주 바뀌지 않는 블로그 특성에 맞게 ISR(Incremental Static Regeneration) 방식으로 데이터를 fetch 했습니다.
 - 뷰포트에 요소가 보여야만 나타나는 등 애니메이션 효과를 구현하기 위해 고민했습니다.
